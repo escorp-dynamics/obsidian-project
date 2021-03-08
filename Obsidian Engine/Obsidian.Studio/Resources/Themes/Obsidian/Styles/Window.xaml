@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib"
+                    xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+                    xmlns:gemini="clr-namespace:Gemini.Modules.MainWindow.Views;assembly=Gemini"
+                    xmlns:local="clr-namespace:Obsidian.Studio.Views">
+
+    <Style TargetType="{x:Type local:StudioWindowView}" BasedOn="{StaticResource {x:Type gemini:MainWindowView}}">
+        <Setter Property="AllowsTransparency" Value="True" />
+        <Setter Property="WindowStyle" Value="None" />
+    </Style>
+    
+</ResourceDictionary>

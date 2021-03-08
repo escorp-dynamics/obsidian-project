@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <AssemblyName>Obsidian Studio</AssemblyName>
+    <StartupObject>Obsidian.Studio.App</StartupObject>
+    <ApplicationIcon />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ControlzEx" Version="5.0.0" />
+    <PackageReference Include="Fluent.Ribbon" Version="8.0.3" />
+    <PackageReference Include="MahApps.Metro" Version="2.4.4" />
+    <PackageReference Include="MahApps.Metro.IconPacks" Version="4.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\External\gemini\src\Gemini.Modules.CodeCompiler\Gemini.Modules.CodeCompiler.csproj" />
+    <ProjectReference Include="..\..\External\gemini\src\Gemini.Modules.CodeEditor\Gemini.Modules.CodeEditor.csproj" />
+    <ProjectReference Include="..\..\External\gemini\src\Gemini.Modules.ErrorList\Gemini.Modules.ErrorList.csproj" />
+    <ProjectReference Include="..\..\External\gemini\src\Gemini.Modules.GraphEditor\Gemini.Modules.GraphEditor.csproj" />
+    <ProjectReference Include="..\..\External\gemini\src\Gemini.Modules.Inspector\Gemini.Modules.Inspector.csproj" />
+    <ProjectReference Include="..\..\External\gemini\src\Gemini.Modules.Output\Gemini.Modules.Output.csproj" />
+    <ProjectReference Include="..\..\External\gemini\src\Gemini.Modules.PropertyGrid\Gemini.Modules.PropertyGrid.csproj" />
+    <ProjectReference Include="..\..\External\gemini\src\Gemini\Gemini.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

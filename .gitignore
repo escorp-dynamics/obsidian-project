@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs
+/Obsidian Engine/.vs/Obsidian Engine
+/Obsidian Engine/Obsidian.Studio/bin/Debug
+/Obsidian Engine/Obsidian.Studio/obj

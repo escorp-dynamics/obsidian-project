@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31019.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Obsidian.Studio", "Obsidian.Studio\Obsidian.Studio.csproj", "{148F676F-CDB6-4E7E-BA91-8C0EA3FC9DE0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{EC53F79A-3A46-489B-AC74-957E571EC38E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gemini", "Gemini", "{A8352964-DE6C-4792-B417-0808ACDACD96}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gemini", "..\External\gemini\src\Gemini\Gemini.csproj", "{711CE5A6-A1C3-43CD-8F1E-8881920FEA64}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gemini.Modules.CodeCompiler", "..\External\gemini\src\Gemini.Modules.CodeCompiler\Gemini.Modules.CodeCompiler.csproj", "{46CBABB2-1E9A-4934-BB7D-BF92CBFD6AAC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gemini.Modules.CodeEditor", "..\External\gemini\src\Gemini.Modules.CodeEditor\Gemini.Modules.CodeEditor.csproj", "{4C184DE7-6723-44B5-BED8-A8B94270B317}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gemini.Modules.ErrorList", "..\External\gemini\src\Gemini.Modules.ErrorList\Gemini.Modules.ErrorList.csproj", "{8C88A2EE-EB6D-49F1-A452-FA267F718758}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gemini.Modules.GraphEditor", "..\External\gemini\src\Gemini.Modules.GraphEditor\Gemini.Modules.GraphEditor.csproj", "{2DD66ED8-FDDA-4FDA-912F-F990DDA552EF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gemini.Modules.Inspector", "..\External\gemini\src\Gemini.Modules.Inspector\Gemini.Modules.Inspector.csproj", "{F94403CC-548E-4840-8019-3D973E8CD593}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gemini.Modules.Output", "..\External\gemini\src\Gemini.Modules.Output\Gemini.Modules.Output.csproj", "{FE65616D-76A2-4D11-BC2C-1F03B79F1810}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gemini.Modules.PropertyGrid", "..\External\gemini\src\Gemini.Modules.PropertyGrid\Gemini.Modules.PropertyGrid.csproj", "{03E8DD8E-39E9-486D-AEAE-8D099F010753}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{148F676F-CDB6-4E7E-BA91-8C0EA3FC9DE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{148F676F-CDB6-4E7E-BA91-8C0EA3FC9DE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{148F676F-CDB6-4E7E-BA91-8C0EA3FC9DE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{148F676F-CDB6-4E7E-BA91-8C0EA3FC9DE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{711CE5A6-A1C3-43CD-8F1E-8881920FEA64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{711CE5A6-A1C3-43CD-8F1E-8881920FEA64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{711CE5A6-A1C3-43CD-8F1E-8881920FEA64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{711CE5A6-A1C3-43CD-8F1E-8881920FEA64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46CBABB2-1E9A-4934-BB7D-BF92CBFD6AAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46CBABB2-1E9A-4934-BB7D-BF92CBFD6AAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46CBABB2-1E9A-4934-BB7D-BF92CBFD6AAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46CBABB2-1E9A-4934-BB7D-BF92CBFD6AAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C184DE7-6723-44B5-BED8-A8B94270B317}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C184DE7-6723-44B5-BED8-A8B94270B317}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C184DE7-6723-44B5-BED8-A8B94270B317}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C184DE7-6723-44B5-BED8-A8B94270B317}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C88A2EE-EB6D-49F1-A452-FA267F718758}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C88A2EE-EB6D-49F1-A452-FA267F718758}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C88A2EE-EB6D-49F1-A452-FA267F718758}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C88A2EE-EB6D-49F1-A452-FA267F718758}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DD66ED8-FDDA-4FDA-912F-F990DDA552EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DD66ED8-FDDA-4FDA-912F-F990DDA552EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DD66ED8-FDDA-4FDA-912F-F990DDA552EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DD66ED8-FDDA-4FDA-912F-F990DDA552EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F94403CC-548E-4840-8019-3D973E8CD593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F94403CC-548E-4840-8019-3D973E8CD593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F94403CC-548E-4840-8019-3D973E8CD593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F94403CC-548E-4840-8019-3D973E8CD593}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE65616D-76A2-4D11-BC2C-1F03B79F1810}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE65616D-76A2-4D11-BC2C-1F03B79F1810}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE65616D-76A2-4D11-BC2C-1F03B79F1810}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE65616D-76A2-4D11-BC2C-1F03B79F1810}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03E8DD8E-39E9-486D-AEAE-8D099F010753}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03E8DD8E-39E9-486D-AEAE-8D099F010753}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03E8DD8E-39E9-486D-AEAE-8D099F010753}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03E8DD8E-39E9-486D-AEAE-8D099F010753}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A8352964-DE6C-4792-B417-0808ACDACD96} = {EC53F79A-3A46-489B-AC74-957E571EC38E}
+		{711CE5A6-A1C3-43CD-8F1E-8881920FEA64} = {A8352964-DE6C-4792-B417-0808ACDACD96}
+		{46CBABB2-1E9A-4934-BB7D-BF92CBFD6AAC} = {A8352964-DE6C-4792-B417-0808ACDACD96}
+		{4C184DE7-6723-44B5-BED8-A8B94270B317} = {A8352964-DE6C-4792-B417-0808ACDACD96}
+		{8C88A2EE-EB6D-49F1-A452-FA267F718758} = {A8352964-DE6C-4792-B417-0808ACDACD96}
+		{2DD66ED8-FDDA-4FDA-912F-F990DDA552EF} = {A8352964-DE6C-4792-B417-0808ACDACD96}
+		{F94403CC-548E-4840-8019-3D973E8CD593} = {A8352964-DE6C-4792-B417-0808ACDACD96}
+		{FE65616D-76A2-4D11-BC2C-1F03B79F1810} = {A8352964-DE6C-4792-B417-0808ACDACD96}
+		{03E8DD8E-39E9-486D-AEAE-8D099F010753} = {A8352964-DE6C-4792-B417-0808ACDACD96}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE015B60-5880-43A1-A00D-A93573EC4EE3}
+	EndGlobalSection
+EndGlobal
