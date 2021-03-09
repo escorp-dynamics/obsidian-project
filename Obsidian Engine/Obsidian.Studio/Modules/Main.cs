@@ -1,5 +1,7 @@
 ﻿using Caliburn.Micro;
 using Gemini.Framework;
+using Gemini.Framework.Services;
+using Gemini.Framework.Themes;
 using Gemini.Modules.Inspector;
 using Gemini.Modules.Output;
 using Obsidian.Studio.ViewModels;
@@ -31,16 +33,11 @@ namespace Obsidian.Studio.Modules
             this.inspectorTool = inspectorTool;
         }
 
-        public override async void Initialize()
+        public override void Initialize()
         {
             base.Initialize();
 
-            //IoC.Get<StudioWindowViewModel>().Hide();
-            //_ = IoC.Get<StartWindowViewModel>().Show();
-
-            Stopwatch timer = new();
-            timer.Start();
-
+            IoC.Get<IThemeManager>().SetCurrentTheme(Properties.Settings.Default.ThemeName);
             List<Task> procedures = new();
 
             Shell.MainMenu.Clear();
@@ -48,7 +45,7 @@ namespace Obsidian.Studio.Modules
             //Shell.ToolBars.Visible = true;
 
             //MainWindow.WindowState = WindowState.Maximized;
-            MainWindow.Title = "Gemini Demo";
+            MainWindow.Title = "Obsidian Studio 2022";
             
             Shell.StatusBar.AddItem("Hello world!", new GridLength(1, GridUnitType.Star));
             Shell.StatusBar.AddItem("Ln 44", new GridLength(100));
@@ -58,16 +55,8 @@ namespace Obsidian.Studio.Modules
 
             Shell.ActiveDocumentChanged += (sender, e) => RefreshInspector();
             RefreshInspector();
-            timer.Stop();
-
+            
             Task.WaitAll(procedures.ToArray());
-
-            long timeout = 3000;
-
-            if (timer.ElapsedMilliseconds < timeout) await Task.Delay((int)(timeout - timer.ElapsedMilliseconds));
-
-            //_ = IoC.Get<StudioWindowViewModel>().Show();
-            //IoC.Get<StartWindowViewModel>().Hide();
         }
 
         private void RefreshInspector()

@@ -12,9 +12,9 @@
                      mc:Ignorable="d"
                      WindowTransitionsEnabled="True"
                      Title="{Binding Title}"
-                     Icon="{Binding Icon}" 
-                     Width="{Binding Width, Mode=TwoWay}"
-                     Height="{Binding Height, Mode=TwoWay}" 
+                     Icon="/Resources/App.ico"
+                     Width="1366"
+                     Height="768"
                      WindowStartupLocation="CenterScreen"
                      WindowState="{Binding WindowState, Mode=TwoWay}"
                      ResizeMode="CanResizeWithGrip"
@@ -22,15 +22,12 @@
                      Style="{DynamicResource MainWindowStyle}"
                      ShowSystemMenuOnRightClick="False"
                      ShowIconOnTitleBar="False"
-                     ShowDialogsOverTitleBar="True"
-                     ShowInTaskbar="False"
-                     d:Width="1366"
-                     d:Height="768">
+                     ShowDialogsOverTitleBar="True">
     <Window.Resources>
         <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
+            <!--<ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary x:Name="ThemeDictionary" />
-            </ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary.MergedDictionaries>-->
 
             <Style x:Key="{x:Type fluent:BackstageTabControl}"
                    TargetType="{x:Type fluent:BackstageTabControl}"
@@ -92,7 +89,7 @@
                        IsQuickAccessToolBarVisible="True">
 
             <!--StartScreen-->
-            <fluent:Ribbon.StartScreen>
+            <!--<fluent:Ribbon.StartScreen>
                 <fluent:StartScreen IsOpen="True" Width="800" Height="450">
                     <fluent:StartScreenTabControl>
                         <fluent:StartScreenTabControl.LeftContent>
@@ -113,7 +110,7 @@
                         </fluent:StartScreenTabControl.RightContent>
                     </fluent:StartScreenTabControl>
                 </fluent:StartScreen>
-            </fluent:Ribbon.StartScreen>
+            </fluent:Ribbon.StartScreen>-->
 
             <!--<fluent:StatusBar>
                 <fluent:StatusBarItem Title="Left placed item"

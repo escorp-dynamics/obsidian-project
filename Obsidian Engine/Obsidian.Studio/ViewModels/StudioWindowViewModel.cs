@@ -1,5 +1,6 @@
 ﻿using Fluent;
 using Gemini.Framework.Services;
+using Gemini.Modules.MainWindow.ViewModels;
 using MahApps.Metro.Controls;
 using Obsidian.Studio.Views;
 using System.ComponentModel.Composition;
@@ -7,7 +8,7 @@ using System.ComponentModel.Composition;
 namespace Obsidian.Studio.ViewModels
 {
     [Export(typeof(IMainWindow))]
-    public class StudioWindowViewModel : BaseViewModel
+    public class StudioWindowViewModel : MainWindowViewModel
     {
         private RibbonTitleBar? titleBar;
 
@@ -31,8 +32,6 @@ namespace Obsidian.Studio.ViewModels
             TitleBar = (view as StudioWindowView).FindChild<RibbonTitleBar>("ribbonTitleBar");
             TitleBar.InvalidateArrange();
             TitleBar.UpdateLayout();
-            Width = 1366;
-            Height = 768;
         }
     }
 }
