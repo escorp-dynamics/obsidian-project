@@ -1,0 +1,110 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:reskeys="clr-namespace:AvalonDock.Themes.VS2013.Themes;assembly=AvalonDock.Themes.VS2013">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Styles/All.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Color x:Key="ControlAccentColor">#479298</Color>
+    <Color x:Key="ControlAccentColorAlt">#5D9CA3</Color>
+    <Color x:Key="ControlAccentColorDark">#297179</Color>
+    
+    <!-- Main Window -->
+    <SolidColorBrush x:Key="MainWindowActiveBorder" Color="{DynamicResource ControlAccentColor}" />
+    
+    <!-- Toolbar → Button -->
+    <SolidColorBrush x:Key="ToolbarButtonCheckedBorder" Color="{DynamicResource ControlAccentColorAlt}" />
+    <SolidColorBrush x:Key="ToolbarButtonCheckedHoveredBorder" Color="{DynamicResource ControlAccentColorAlt}" />
+    <SolidColorBrush x:Key="ToolbarButtonHoveredArrow" Color="{DynamicResource ControlAccentColor}" />
+    <SolidColorBrush x:Key="ToolbarButtonPressedBackground" Color="{DynamicResource ControlAccentColor}" />
+
+    <!-- Toolbar → Overflow Button -->
+    <SolidColorBrush x:Key="ToolbarOverflowButtonHoveredGlyph" Color="{DynamicResource ControlAccentColor}" />
+    <SolidColorBrush x:Key="ToolbarOverflowButtonPressedBackground" Color="{DynamicResource ControlAccentColor}" />
+
+    <!-- Menu → Popup -->
+    <SolidColorBrush x:Key="MenuPopupHoveredArrow" Color="{DynamicResource ControlAccentColor}" />
+
+    <!-- Main Window → Caption → Button -->
+    <SolidColorBrush x:Key="MainWindowCaptionButtonPressedBackground" Color="{DynamicResource ControlAccentColor}" />
+    <SolidColorBrush x:Key="MainWindowCaptionButtonPressedBorder" Color="{DynamicResource ControlAccentColor}" />
+
+    <!-- Status bar -->
+    <SolidColorBrush x:Key="StatusBarBackground" Color="{DynamicResource ControlAccentColor}" />
+
+    <!-- Tree view item -->
+    <SolidColorBrush x:Key="TreeViewItem.Highlight.Static" Color="{DynamicResource ControlAccentColorAlt}" />
+    <SolidColorBrush x:Key="TreeViewItem.TreeArrow.MouseOver.Stroke" Color="{DynamicResource ControlAccentColor}" />
+    <SolidColorBrush x:Key="TreeViewItem.TreeArrow.MouseOver.Checked.Fill" Color="{DynamicResource ControlAccentColor}" />
+    <SolidColorBrush x:Key="TreeViewItem.TreeArrow.MouseOver.Checked.Stroke" Color="{DynamicResource ControlAccentColor}" />
+
+    <!-- Button -->
+    <SolidColorBrush x:Key="Button.MouseOver.Border" Color="{DynamicResource ControlAccentColor}" />
+
+    <!-- Check box -->
+    <SolidColorBrush x:Key="OptionMark.MouseOver.Border" Color="{DynamicResource ControlAccentColorAlt}"/>
+    <SolidColorBrush x:Key="OptionMark.Pressed.Border" Color="{DynamicResource ControlAccentColor}"/>
+
+    <!-- Text box -->
+    <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="{DynamicResource ControlAccentColorAlt}"/>
+    <SolidColorBrush x:Key="TextBox.Focus.Border" Color="{DynamicResource ControlAccentColor}"/>
+    <SolidColorBrush x:Key="TextBox.Selection.Background" Color="{DynamicResource ControlAccentColorDark}"/>
+    <SolidColorBrush x:Key="TextBox.Selection.InactiveBackground" Color="{DynamicResource ControlAccentColorDark}"/>
+
+    <!-- Slider -->
+    <SolidColorBrush x:Key="SliderThumb.MouseOver.Border" Color="{DynamicResource ControlAccentColorAlt}"/>
+    <SolidColorBrush x:Key="SliderThumb.Pressed.Border" Color="{DynamicResource ControlAccentColor}"/>
+
+    <!-- Color picker -->
+    <SolidColorBrush x:Key="ColorPicker.ColorList.MouseOver.Border" Color="{DynamicResource ControlAccentColor}" />
+    <SolidColorBrush x:Key="ColorPicker.ColorList.Selected.Border" Color="{DynamicResource ControlAccentColorAlt}" />
+
+    <!-- Scroll bar -->
+    <SolidColorBrush x:Key="ScrollBar.Pressed.Glyph" Color="{DynamicResource ControlAccentColor}"/>
+    <SolidColorBrush x:Key="ScrollBar.MouseOver.Glyph" Color="{DynamicResource ControlAccentColorAlt}"/>
+
+    <!-- Combo box -->
+    <SolidColorBrush x:Key="ComboBox.MouseOver.Glyph" Color="{DynamicResource ControlAccentColor}"/>
+    <SolidColorBrush x:Key="ComboBox.MouseOver.Button.Border" Color="{DynamicResource ControlAccentColor}"/>
+    <SolidColorBrush x:Key="ComboBox.Pressed.Button.Background" Color="{DynamicResource ControlAccentColor}"/>
+    <SolidColorBrush x:Key="ComboBox.Pressed.Button.Border" Color="{DynamicResource ControlAccentColor}"/>
+
+    
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.DocumentWellOverflowButtonHoveredGlyph}" Color="{DynamicResource ControlAccentColor}" />
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.DocumentWellOverflowButtonPressedBackground}" Color="{DynamicResource ControlAccentColor}" />
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.DocumentWellOverflowButtonPressedBorder}" Color="{DynamicResource ControlAccentColor}" />
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.DocumentWellTabSelectedActiveBackground}" Color="{DynamicResource ControlAccentColor}" />
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.DocumentWellTabUnselectedHoveredBackground}" Color="{DynamicResource ControlAccentColorAlt}" />
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.DocumentWellTabButtonSelectedActiveHoveredBackground}" Color="{DynamicResource ControlAccentColorAlt}" />
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.DocumentWellTabButtonSelectedActiveHoveredBorder}" Color="{DynamicResource ControlAccentColorAlt}" />
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.DocumentWellTabButtonSelectedActivePressedBackground}" Color="{DynamicResource ControlAccentColorDark}" />
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.DocumentWellTabButtonSelectedActivePressedBorder}" Color="{DynamicResource ControlAccentColorDark}" />
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.DocumentWellTabButtonUnselectedTabHoveredButtonHoveredBackground}" Color="{DynamicResource ControlAccentColorAlt}" />
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.DocumentWellTabButtonUnselectedTabHoveredButtonHoveredBorder}" Color="{DynamicResource ControlAccentColorAlt}" />
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.DocumentWellTabButtonUnselectedTabHoveredButtonPressedBackground}" Color="{DynamicResource ControlAccentColorDark}" />
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.DocumentWellTabButtonUnselectedTabHoveredButtonPressedBorder}" Color="{DynamicResource ControlAccentColorDark}" />
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.ToolWindowCaptionActiveBackground}" Color="{DynamicResource ControlAccentColor}" />
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.ToolWindowCaptionActiveGrip}" Color="{DynamicResource ControlAccentColorAlt}" />
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.ToolWindowCaptionButtonActiveHoveredBackground}" Color="{DynamicResource ControlAccentColorAlt}" />
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.ToolWindowCaptionButtonActiveHoveredBorder}" Color="{DynamicResource ControlAccentColorAlt}" />
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.ToolWindowCaptionButtonActivePressedBackground}" Color="{DynamicResource ControlAccentColorDark}" />
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.ToolWindowCaptionButtonActivePressedBorder}" Color="{DynamicResource ControlAccentColorDark}" />
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.ToolWindowCaptionButtonInactivePressedBackground}" Color="{DynamicResource ControlAccentColorDark}" />
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.ToolWindowCaptionButtonInactivePressedBorder}" Color="{DynamicResource ControlAccentColorDark}" />
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.ToolWindowTabSelectedActiveText}" Color="{DynamicResource ControlAccentColorDark}" />
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.ToolWindowTabSelectedInactiveText}" Color="{DynamicResource ControlAccentColorDark}" />
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.ToolWindowTabUnselectedHoveredText}" Color="{DynamicResource ControlAccentColorAlt}" />
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.NavigatorWindowSelectedBackground}" Color="{DynamicResource ControlAccentColor}" />
+
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.ControlAccentBrushKey}" Color="{DynamicResource ControlAccentColor}" />
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.PreviewBoxBorderBrushKey}" Color="{DynamicResource ControlAccentColor}" />
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.PreviewBoxBackgroundBrushKey}" Opacity="0.5" Color="{DynamicResource ControlAccentColor}" />
+
+    <!--<SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.FocusScrollButtonBrushKey}" Color="{DynamicResource ControlAccentColorDark}" />-->
+
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.AutoHideTabHoveredBorder}" Color="{DynamicResource ControlAccentColor}" />
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.AutoHideTabHoveredText}" Color="{DynamicResource ControlAccentColor}" />
+    <SolidColorBrush x:Key="{x:Static reskeys:ResourceKeys.DockingButtonForegroundBrushKey}" Color="{DynamicResource ControlAccentColor}" />
+
+</ResourceDictionary>

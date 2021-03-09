@@ -8,6 +8,7 @@
                      xmlns:viewmodels="clr-namespace:Obsidian.Studio.ViewModels"
                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                     xmlns:gemini="http://schemas.timjones.io/gemini"
                      d:DataContext="{d:DesignInstance Type=viewmodels:StudioWindowViewModel}"
                      mc:Ignorable="d"
                      WindowTransitionsEnabled="True"
@@ -25,52 +26,37 @@
                      ShowDialogsOverTitleBar="True">
     <Window.Resources>
         <ResourceDictionary>
-            <!--<ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary x:Name="ThemeDictionary" />
-            </ResourceDictionary.MergedDictionaries>-->
+            </ResourceDictionary.MergedDictionaries>
 
             <Style x:Key="{x:Type fluent:BackstageTabControl}"
                    TargetType="{x:Type fluent:BackstageTabControl}"
                    BasedOn="{StaticResource {x:Type fluent:BackstageTabControl}}">
                 <Setter Property="SelectedContentMargin" Value="0" />
             </Style>
-            
+
         </ResourceDictionary>
     </Window.Resources>
     
     <!--<mahapps:MetroWindow.LeftWindowCommands>
         <mahapps:WindowCommands>
-            <Button ToolTip="Open up the GitHub site">
-                <iconPacks:PackIconModern Width="22"
-                                  Height="22"
-                                  Kind="SocialGithubOctocat" />
-            </Button>
-
-            <Button ToolTip="Open up the GitHub site">
-                <iconPacks:PackIconModern Width="22"
-                                  Height="22"
-                                  Kind="SocialGithubOctocat" />
-            </Button>
-
-            <Button ToolTip="Open up the GitHub site">
-                <iconPacks:PackIconModern Width="22"
-                                  Height="22"
-                                  Kind="SocialGithubOctocat" />
-            </Button>
-
-            <Button ToolTip="Open up the GitHub site">
-                <iconPacks:PackIconModern Width="22"
-                                  Height="22"
-                                  Kind="SocialGithubOctocat" />
-            </Button>
-
-            <Button ToolTip="Open up the GitHub site">
-                <iconPacks:PackIconModern Width="22"
-                                  Height="22"
-                                  Kind="SocialGithubOctocat" />
+            <Button ToolTip="{DynamicResource StrGlobalSettingsTooltip}"
+                    Style="{DynamicResource MetroWindowButtonStyle}">
+                <iconPacks:PackIconCodicons Kind="Settings" />
             </Button>
         </mahapps:WindowCommands>
     </mahapps:MetroWindow.LeftWindowCommands>-->
+    
+    <mahapps:MetroWindow.RightWindowCommands>
+        <mahapps:WindowCommands>
+            <Button ToolTip="{DynamicResource StrGlobalSettingsTooltip}"
+                    Style="{DynamicResource MetroWindowButtonStyle}"
+                    cal:Message.Attach="[Event Click] = [Action OnGlobalSettingsShow()]">
+                <iconPacks:PackIconCodicons Kind="Settings" />
+            </Button>
+        </mahapps:WindowCommands>
+    </mahapps:MetroWindow.RightWindowCommands>
 
     <mahapps:MetroWindow.TitleTemplate>
         <DataTemplate>
@@ -131,10 +117,10 @@
                           HorizontalAlignment="Right"
                           Value="Your value which is also used as content if no content is set." />
             </fluent:StatusBar>-->
-
+            
             <!--Quick Access Toolbar Items-->
-            <fluent:Ribbon.QuickAccessItems>
-                <!--Use Content or Target Property to set QAT item-->
+            <!--<fluent:Ribbon.QuickAccessItems>
+                
                 <fluent:QuickAccessMenuItem IsChecked="true">
                     <fluent:Button Header="Pink">
                         <fluent:Button.Icon>
@@ -183,13 +169,20 @@
                     </fluent:Button>
                 </fluent:QuickAccessMenuItem>
 
-                <!--You Can Just Bind with Any Control-->
-                <!--<fluent:QuickAccessMenuItem Target="{Binding ElementName=buttonGreen}" />-->
-            </fluent:Ribbon.QuickAccessItems>
+                --><!--You Can Just Bind with Any Control-->
+                <!--<fluent:QuickAccessMenuItem Target="{Binding ElementName=buttonGreen}" />--><!--
+            </fluent:Ribbon.QuickAccessItems>-->
             
             <!--Backstage-->
             <fluent:Ribbon.Menu>
                 <fluent:Backstage>
+                    <fluent:Backstage.Header>
+                        <TextBlock IsHitTestVisible="False"
+                                   FontSize="20"
+                                   Margin="0,-7,0,0"
+                                   FontFamily="{StaticResource Cybero}">obsidian engine</TextBlock>
+                    </fluent:Backstage.Header>
+                    
                     <fluent:BackstageTabControl>
                         <fluent:BackstageTabItem Header="New" />
                         <fluent:BackstageTabItem Header="Print" />

@@ -8,21 +8,25 @@
     <AssemblyName>Obsidian Studio</AssemblyName>
     <StartupObject>Obsidian.Studio.App</StartupObject>
     <ApplicationIcon />
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Remove="Resources\App.ico" />
+    <None Remove="Resources\Fonts\Cybero.ttf" />
     <None Remove="Resources\Images\Background.jpg" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ControlzEx" Version="5.0.0" />
     <PackageReference Include="Fluent.Ribbon" Version="8.0.3" />
-    <PackageReference Include="MahApps.Metro" Version="2.4.4" />
     <PackageReference Include="MahApps.Metro.IconPacks" Version="4.8.0" />
   </ItemGroup>
 
@@ -39,6 +43,7 @@
 
   <ItemGroup>
     <Resource Include="Resources\App.ico" />
+    <Resource Include="Resources\Fonts\Cybero.ttf" />
     <Resource Include="Resources\Images\Background.jpg" />
   </ItemGroup>
 

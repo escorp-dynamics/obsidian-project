@@ -3,4 +3,5 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Window.xaml" />
     </ResourceDictionary.MergedDictionaries>
+
 </ResourceDictionary>

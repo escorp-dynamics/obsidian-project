@@ -37,7 +37,6 @@ namespace Obsidian.Studio.Modules
         {
             base.Initialize();
 
-            IoC.Get<IThemeManager>().SetCurrentTheme(Properties.Settings.Default.ThemeName);
             List<Task> procedures = new();
 
             Shell.MainMenu.Clear();

@@ -5,20 +5,18 @@
              xmlns:gemini="http://schemas.timjones.io/gemini">
     <Application.Resources>
         <ResourceDictionary>
+
+            <FontFamily x:Key="Cybero">pack://application:,,,/Resources/Fonts/#Cybero</FontFamily>
+            
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary>
                     <local:AppBootstrapper x:Key="bootstrapper" />
                 </ResourceDictionary>
 
-                <ResourceDictionary Source="pack://application:,,,/Gemini;Component/Themes/Generic.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/Gemini;component/Themes/VS2013/DarkTheme.xaml" />
-
-                <ResourceDictionary Source="pack://application:,,,/Fluent;Component/Themes/Generic.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/Fluent;component/Themes/Themes/Dark.Steel.xaml" />
-
+                <ResourceDictionary Source="Resources/Localizations/ru.xaml" />
                 <ResourceDictionary Source="Resources/Images/All.xaml" />
-                <ResourceDictionary Source="Resources/Themes/Obsidian/Styles/All.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

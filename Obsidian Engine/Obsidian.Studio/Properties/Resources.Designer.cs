@@ -71,11 +71,11 @@ namespace Obsidian.Studio.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Obsidian Studio 2022.
+        ///   Ищет локализованную строку, похожую на Obsidian.
         /// </summary>
-        internal static string MainWindowDefaultTitle {
+        internal static string ThemeObsidianName {
             get {
-                return ResourceManager.GetString("MainWindowDefaultTitle", resourceCulture);
+                return ResourceManager.GetString("ThemeObsidianName", resourceCulture);
             }
         }
     }

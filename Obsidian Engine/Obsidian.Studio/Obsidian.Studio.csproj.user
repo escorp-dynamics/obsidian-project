@@ -18,6 +18,12 @@
     <Page Update="Resources\Images\All.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Resources\Localizations\ru.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Themes\Obsidian\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Resources\Themes\Obsidian\Styles\All.xaml">
       <SubType>Designer</SubType>
     </Page>

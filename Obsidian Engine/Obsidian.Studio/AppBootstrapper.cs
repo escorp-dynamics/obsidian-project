@@ -1,6 +1,4 @@
-﻿using Caliburn.Micro;
-using Gemini.Framework.Services;
-using Obsidian.Studio.ViewModels;
+﻿using Gemini.Framework.Services;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows;
@@ -13,8 +11,6 @@ namespace Obsidian.Studio
 
         protected override async void OnStartup(object sender, StartupEventArgs e)
         {
-            await DisplayRootViewFor<StartWindowViewModel>();
-
             Stopwatch timer = new();
             timer.Start();
 
@@ -25,7 +21,7 @@ namespace Obsidian.Studio
 
             if (timer.ElapsedMilliseconds < timeout) await Task.Delay((int)(timeout - timer.ElapsedMilliseconds));
 
-            await IoC.Get<StartWindowViewModel>().TryCloseAsync();
+            App.Current.StartWindow.Close();
         }
     }
 }

@@ -5,15 +5,6 @@
                     xmlns:mahapps="http://metro.mahapps.com/winfx/xaml/controls"
                     xmlns:local="clr-namespace:Obsidian.Studio.Views">
 
-    <Style TargetType="{x:Type local:StartWindowView}" BasedOn="{StaticResource {x:Type mahapps:MetroWindow}}">
-        <Setter Property="AllowsTransparency" Value="True" />
-        <Setter Property="WindowStyle" Value="None" />
-        <Setter Property="ShowInTaskbar" Value="False" />
-        <Setter Property="Width" Value="800" />
-        <Setter Property="Height" Value="450" />
-        <Setter Property="ShowTitleBar" Value="False" />
-        <Setter Property="Icon" Value="/Resources/App.ico" />
-        <Setter Property="Background" Value="{StaticResource BackgroundImage}" />
-    </Style>
+    
 
 </ResourceDictionary>

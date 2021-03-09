@@ -25,7 +25,7 @@ namespace Obsidian.Studio.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("DarkTheme")]
+        [global::System.Configuration.DefaultSettingValueAttribute("ObsidianTheme")]
         public string ThemeName {
             get {
                 return ((string)(this["ThemeName"]));
