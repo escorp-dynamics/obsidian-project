@@ -61,7 +61,11 @@
 
     <mahapps:MetroWindow.TitleTemplate>
         <DataTemplate>
-            <fluent:RibbonTitleBar x:Name="ribbonTitleBar" Header="{Binding Path=Title, RelativeSource={RelativeSource AncestorType=Window}}" Background="Red"/>
+            <fluent:RibbonTitleBar x:Name="ribbonTitleBar"
+                                   HorizontalAlignment="Stretch"
+                                   Header="{Binding Path=Title, RelativeSource={RelativeSource AncestorType=Window}}">
+
+            </fluent:RibbonTitleBar>
         </DataTemplate>
     </mahapps:MetroWindow.TitleTemplate>
     
@@ -72,8 +76,9 @@
         </Grid.RowDefinitions>
 
         <fluent:Ribbon Grid.Row="0"
+                       AutomaticStateManagement="True"
                        CanQuickAccessLocationChanging="False"
-                       IsQuickAccessToolBarVisible="True">
+                       IsQuickAccessToolBarVisible="False">
 
             <!--StartScreen-->
             <!--<fluent:Ribbon.StartScreen>
@@ -178,12 +183,15 @@
             <fluent:Ribbon.Menu>
                 <fluent:Backstage>
                     <fluent:Backstage.Header>
+
                         <TextBlock IsHitTestVisible="False"
-                                   FontSize="20"
-                                   Margin="0,-7,0,0"
-                                   FontFamily="{StaticResource Cybero}">obsidian engine</TextBlock>
+                                            FontSize="20"
+                                            Margin="0,-7,0,0"
+                                            FontFamily="{StaticResource Cybero}"
+                                            Text="obsidian studio" />
+
                     </fluent:Backstage.Header>
-                    
+
                     <fluent:BackstageTabControl>
                         <fluent:BackstageTabItem Header="New" />
                         <fluent:BackstageTabItem Header="Print" />
@@ -192,22 +200,107 @@
                 </fluent:Backstage>
             </fluent:Ribbon.Menu>
 
+            <fluent:Ribbon.ToolBarItems>
+                
+                <fluent:Button Size="Small">
+                    <fluent:Button.Icon>
+                        <iconPacks:PackIconEntypo Kind="Help" />
+                    </fluent:Button.Icon>
+
+                    <fluent:Button.ToolTip>
+                        <fluent:ScreenTip Title="Insert Chart"
+                                          Text="Insert a chart to illustarate and compare data. &#xa;&#xa;Bar, Pie, Line, Area and Surface are same of the available types."
+                                          Image="pack://application:,,,/Resources/Images/Background.jpg"
+                                          HelpTopic="https://github.com/fluentribbon/Fluent.Ribbon"
+                                          DisableReason="Disable reason reason."
+                                          Width="290"
+                                          IsRibbonAligned="False" />
+                    </fluent:Button.ToolTip>
+                </fluent:Button>
+                
+            </fluent:Ribbon.ToolBarItems>
+            
             <!--Contextual Tab Groups-->
             <fluent:Ribbon.ContextualGroups>
                 <fluent:RibbonContextualTabGroup x:Name="toolsGroup"
-                                     Header="Tools" 
+                                     Header="Интерфейс" 
                                      Visibility="Visible"
-                                     Background="Green" 
-                                     BorderBrush="Green" />
+                                     Background="ForestGreen" 
+                                     BorderBrush="ForestGreen" />
             </fluent:Ribbon.ContextualGroups>
 
             <!--Tabs-->
-            <fluent:RibbonTabItem Header="Home" Group="{Binding Source={x:Reference toolsGroup}}">
-                <fluent:RibbonGroupBox Header="Group">
-                    <fluent:Button Header="Red" />
-                    <fluent:Button Header="Green" />
-                    <fluent:Button Header="Blue" />
+            <fluent:RibbonTabItem Header="Окна" Group="{Binding Source={x:Reference toolsGroup}}">
+                <!-- Средства -->
+                <fluent:RibbonGroupBox Header="Средства">
+                    <!-- Инспектор -->
+                    <fluent:ToggleButton x:Name="toggleInspectorTool"
+                                         Header="Инспектор"
+                                         cal:Message.Attach="[Event Click] = [Action OnToolInspectorToggled()]"
+                                         Size="Middle">
+                        <fluent:ToggleButton.Icon>
+                            <iconPacks:PackIconVaadinIcons Kind="ModalList" />
+                        </fluent:ToggleButton.Icon>
+
+                        <fluent:ToggleButton.ToolTip>
+                            <fluent:ScreenTip Title="Окно инспектирования"
+                                              Text="Позволяет изменять свойства объектов в режиме реального времени"
+                                              IsRibbonAligned="False" />
+                        </fluent:ToggleButton.ToolTip>
+                    </fluent:ToggleButton>
+
+                    <!-- Обозреватель ресурсов -->
+                    <fluent:ToggleButton x:Name="toggleResourcesBrowserTool"
+                                         Header="Обозреватель ресурсов"
+                                         Size="Middle">
+                        <fluent:ToggleButton.Icon>
+                            <iconPacks:PackIconOcticons Kind="FileSubmodule" />
+                        </fluent:ToggleButton.Icon>
+
+                        <fluent:ToggleButton.ToolTip>
+                            <fluent:ScreenTip Title="Окно обозревателя ресурсов"
+                                              Text="Позволяет просматривать файлы проекта и управлять ими на уровне файловой системы"
+                                              IsRibbonAligned="False" />
+                        </fluent:ToggleButton.ToolTip>
+                    </fluent:ToggleButton>
+
+                    <!-- Список ошибок -->
+                    <fluent:ToggleButton x:Name="toggleErrorListTool"
+                                         Header="Список ошибок"
+                                         cal:Message.Attach="[Event Click] = [Action OnToolErrorListToggled()]"
+                                         Size="Middle">
+                        <fluent:ToggleButton.Icon>
+                            <iconPacks:PackIconIonicons Kind="BugiOS" />
+                        </fluent:ToggleButton.Icon>
+
+                        <fluent:ToggleButton.ToolTip>
+                            <fluent:ScreenTip Title="Окно списка ошибок"
+                                              Text="Позволяет отслеживать критические ошибки и предупреждения в режиме реального времени"
+                                              IsRibbonAligned="False" />
+                        </fluent:ToggleButton.ToolTip>
+                    </fluent:ToggleButton>
+
+                    <!-- Журнал -->
+                    <fluent:ToggleButton x:Name="toggleOutputTool"
+                                         Header="Журнал"
+                                         cal:Message.Attach="[Event Click] = [Action OnToolOutputToggled()]"
+                                         Size="Middle">
+                        <fluent:ToggleButton.Icon>
+                            <iconPacks:PackIconBootstrapIcons Kind="Journal" />
+                        </fluent:ToggleButton.Icon>
+
+                        <fluent:ToggleButton.ToolTip>
+                            <fluent:ScreenTip Title="Окно журнала вывода"
+                                              Text="Позволяет отслеживать все сообщения журнала в режиме реального времени"
+                                              IsRibbonAligned="False" />
+                        </fluent:ToggleButton.ToolTip>
+                    </fluent:ToggleButton>
+
                 </fluent:RibbonGroupBox>
+            </fluent:RibbonTabItem>
+
+            <fluent:RibbonTabItem Header="Вкладка 2" Group="{Binding Source={x:Reference toolsGroup}}">
+                
             </fluent:RibbonTabItem>
         </fluent:Ribbon>
 

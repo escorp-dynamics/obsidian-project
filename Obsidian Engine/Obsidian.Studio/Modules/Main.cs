@@ -54,7 +54,7 @@ namespace Obsidian.Studio.Modules
 
             Shell.ActiveDocumentChanged += (sender, e) => RefreshInspector();
             RefreshInspector();
-            
+
             Task.WaitAll(procedures.ToArray());
         }
 
@@ -67,14 +67,5 @@ namespace Obsidian.Studio.Modules
             else
                 inspectorTool.SelectedObject = null;
         }
-    }
-
-    public static class MainExtensions
-    {
-        public static T GetViewModel<T>(this ModuleBase _, string? key = null) where T : IViewAware => IoC.Get<T>(key);
-
-        public static T GetView<T>(this IViewAware vm, object? ctx = null) where T : UIElement => (T)vm.GetView(ctx);
-
-        public static TView GetView<TViewModel, TView>(this ModuleBase _, string? key = null, object? ctx = null) where TViewModel : IViewAware where TView : UIElement => _.GetViewModel<TViewModel>(key).GetView<TView>(ctx);
     }
 }
