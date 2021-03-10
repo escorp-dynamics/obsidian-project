@@ -9,21 +9,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{EC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gemini", "Gemini", "{A8352964-DE6C-4792-B417-0808ACDACD96}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gemini", "..\External\gemini\src\Gemini\Gemini.csproj", "{711CE5A6-A1C3-43CD-8F1E-8881920FEA64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gemini", "..\External\gemini-for-obsidian-studio\src\Gemini\Gemini.csproj", "{711CE5A6-A1C3-43CD-8F1E-8881920FEA64}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gemini.Modules.CodeCompiler", "..\External\gemini\src\Gemini.Modules.CodeCompiler\Gemini.Modules.CodeCompiler.csproj", "{46CBABB2-1E9A-4934-BB7D-BF92CBFD6AAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gemini.Modules.CodeCompiler", "..\External\gemini-for-obsidian-studio\src\Gemini.Modules.CodeCompiler\Gemini.Modules.CodeCompiler.csproj", "{46CBABB2-1E9A-4934-BB7D-BF92CBFD6AAC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gemini.Modules.CodeEditor", "..\External\gemini\src\Gemini.Modules.CodeEditor\Gemini.Modules.CodeEditor.csproj", "{4C184DE7-6723-44B5-BED8-A8B94270B317}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gemini.Modules.CodeEditor", "..\External\gemini-for-obsidian-studio\src\Gemini.Modules.CodeEditor\Gemini.Modules.CodeEditor.csproj", "{4C184DE7-6723-44B5-BED8-A8B94270B317}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gemini.Modules.ErrorList", "..\External\gemini\src\Gemini.Modules.ErrorList\Gemini.Modules.ErrorList.csproj", "{8C88A2EE-EB6D-49F1-A452-FA267F718758}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gemini.Modules.ErrorList", "..\External\gemini-for-obsidian-studio\src\Gemini.Modules.ErrorList\Gemini.Modules.ErrorList.csproj", "{8C88A2EE-EB6D-49F1-A452-FA267F718758}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gemini.Modules.GraphEditor", "..\External\gemini\src\Gemini.Modules.GraphEditor\Gemini.Modules.GraphEditor.csproj", "{2DD66ED8-FDDA-4FDA-912F-F990DDA552EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gemini.Modules.GraphEditor", "..\External\gemini-for-obsidian-studio\src\Gemini.Modules.GraphEditor\Gemini.Modules.GraphEditor.csproj", "{2DD66ED8-FDDA-4FDA-912F-F990DDA552EF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gemini.Modules.Inspector", "..\External\gemini\src\Gemini.Modules.Inspector\Gemini.Modules.Inspector.csproj", "{F94403CC-548E-4840-8019-3D973E8CD593}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gemini.Modules.Inspector", "..\External\gemini-for-obsidian-studio\src\Gemini.Modules.Inspector\Gemini.Modules.Inspector.csproj", "{F94403CC-548E-4840-8019-3D973E8CD593}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gemini.Modules.Output", "..\External\gemini\src\Gemini.Modules.Output\Gemini.Modules.Output.csproj", "{FE65616D-76A2-4D11-BC2C-1F03B79F1810}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gemini.Modules.Output", "..\External\gemini-for-obsidian-studio\src\Gemini.Modules.Output\Gemini.Modules.Output.csproj", "{FE65616D-76A2-4D11-BC2C-1F03B79F1810}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gemini.Modules.PropertyGrid", "..\External\gemini\src\Gemini.Modules.PropertyGrid\Gemini.Modules.PropertyGrid.csproj", "{03E8DD8E-39E9-486D-AEAE-8D099F010753}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gemini.Modules.PropertyGrid", "..\External\gemini-for-obsidian-studio\src\Gemini.Modules.PropertyGrid\Gemini.Modules.PropertyGrid.csproj", "{03E8DD8E-39E9-486D-AEAE-8D099F010753}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

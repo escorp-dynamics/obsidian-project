@@ -22,6 +22,7 @@
                      UseLayoutRounding="True"
                      Style="{DynamicResource MainWindowStyle}"
                      ShowSystemMenuOnRightClick="False"
+                     SaveWindowPosition="True"
                      ShowIconOnTitleBar="False"
                      ShowDialogsOverTitleBar="True">
     <Window.Resources>

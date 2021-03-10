@@ -1,4 +1,6 @@
 ﻿using Gemini.Framework.Services;
+using Gemini.Framework.Themes;
+using System.ComponentModel.Composition;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows;
@@ -22,6 +24,13 @@ namespace Obsidian.Studio
             if (timer.ElapsedMilliseconds < timeout) await Task.Delay((int)(timeout - timer.ElapsedMilliseconds));
 
             App.Current.StartWindow.Close();
+        }
+
+        protected override void BuildUp(object instance)
+        {
+            if (instance is BlueTheme || instance is LightTheme || instance is DarkTheme) return;
+
+            Container.SatisfyImportsOnce(instance);
         }
     }
 }

@@ -1,10 +1,8 @@
 ﻿using Caliburn.Micro;
 using Fluent;
-using Gemini.Framework.Commands;
 using Gemini.Framework.Services;
 using Gemini.Framework.Themes;
 using Gemini.Modules.MainWindow.ViewModels;
-using Gemini.Modules.Settings.Commands;
 using Gemini.Modules.Settings.ViewModels;
 using MahApps.Metro.Controls;
 using Obsidian.Studio.Properties;
@@ -31,7 +29,20 @@ namespace Obsidian.Studio.ViewModels
             }
         }
 
-        public StudioWindowViewModel() : base() => IoC.Get<IThemeManager>().SetCurrentTheme(Settings.Default.ThemeName);
+        public StudioWindowViewModel() : base()
+        {
+            IThemeManager themeManager = IoC.Get<IThemeManager>();
+
+            for (int i = 0; i < themeManager.Themes.Count; i++)
+            {
+                Type type = themeManager.Themes[i].GetType();
+
+                if (type == typeof(BlueTheme) || type == typeof(LightTheme) || type == typeof(DarkTheme))
+                    themeManager.Themes.Remove(themeManager.Themes[i]);
+            }
+
+            themeManager.SetCurrentTheme(Settings.Default.ThemeName);
+        }
 
         protected override async void OnViewReady(object view)
         {
@@ -47,6 +58,6 @@ namespace Obsidian.Studio.ViewModels
             TitleBar.UpdateLayout();
         }
 
-        protected virtual async void OnGlobalSettingsShow() => await IoC.Get<IWindowManager>().ShowDialogAsync(IoC.Get<SettingsViewModel>());
+        public virtual async void OnGlobalSettingsShow() => await IoC.Get<IWindowManager>().ShowDialogAsync(IoC.Get<SettingsViewModel>());
     }
 }

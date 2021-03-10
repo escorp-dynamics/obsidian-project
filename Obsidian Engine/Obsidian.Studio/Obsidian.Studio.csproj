@@ -31,14 +31,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\External\gemini\src\Gemini.Modules.CodeCompiler\Gemini.Modules.CodeCompiler.csproj" />
-    <ProjectReference Include="..\..\External\gemini\src\Gemini.Modules.CodeEditor\Gemini.Modules.CodeEditor.csproj" />
-    <ProjectReference Include="..\..\External\gemini\src\Gemini.Modules.ErrorList\Gemini.Modules.ErrorList.csproj" />
-    <ProjectReference Include="..\..\External\gemini\src\Gemini.Modules.GraphEditor\Gemini.Modules.GraphEditor.csproj" />
-    <ProjectReference Include="..\..\External\gemini\src\Gemini.Modules.Inspector\Gemini.Modules.Inspector.csproj" />
-    <ProjectReference Include="..\..\External\gemini\src\Gemini.Modules.Output\Gemini.Modules.Output.csproj" />
-    <ProjectReference Include="..\..\External\gemini\src\Gemini.Modules.PropertyGrid\Gemini.Modules.PropertyGrid.csproj" />
-    <ProjectReference Include="..\..\External\gemini\src\Gemini\Gemini.csproj" />
+    <ProjectReference Include="..\..\External\gemini-for-obsidian-studio\src\Gemini.Modules.CodeCompiler\Gemini.Modules.CodeCompiler.csproj" />
+    <ProjectReference Include="..\..\External\gemini-for-obsidian-studio\src\Gemini.Modules.CodeEditor\Gemini.Modules.CodeEditor.csproj" />
+    <ProjectReference Include="..\..\External\gemini-for-obsidian-studio\src\Gemini.Modules.ErrorList\Gemini.Modules.ErrorList.csproj" />
+    <ProjectReference Include="..\..\External\gemini-for-obsidian-studio\src\Gemini.Modules.GraphEditor\Gemini.Modules.GraphEditor.csproj" />
+    <ProjectReference Include="..\..\External\gemini-for-obsidian-studio\src\Gemini.Modules.Inspector\Gemini.Modules.Inspector.csproj" />
+    <ProjectReference Include="..\..\External\gemini-for-obsidian-studio\src\Gemini.Modules.Output\Gemini.Modules.Output.csproj" />
+    <ProjectReference Include="..\..\External\gemini-for-obsidian-studio\src\Gemini.Modules.PropertyGrid\Gemini.Modules.PropertyGrid.csproj" />
+    <ProjectReference Include="..\..\External\gemini-for-obsidian-studio\src\Gemini\Gemini.csproj" />
   </ItemGroup>
 
   <ItemGroup>
