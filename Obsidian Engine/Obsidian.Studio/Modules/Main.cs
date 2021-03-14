@@ -1,38 +1,65 @@
-﻿using Caliburn.Micro;
-using Gemini.Framework;
-using Gemini.Framework.Services;
-using Gemini.Framework.Themes;
+﻿using Gemini.Framework;
+using Gemini.Modules.ErrorList;
 using Gemini.Modules.Inspector;
 using Gemini.Modules.Output;
-using Obsidian.Studio.ViewModels;
-using Obsidian.Studio.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
-using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows;
 
 namespace Obsidian.Studio.Modules
 {
+    /// <summary>
+    /// Представляет главный модуль приложения.
+    /// </summary>
     [Export(typeof(IModule))]
     public class Main : ModuleBase
     {
-        private readonly IOutput output;
-        private readonly IInspectorTool inspectorTool;
+        /// <summary>
+        /// Субокно журнала.
+        /// </summary>
+        public IOutput Output { get; protected set; }
 
+        /// <summary>
+        /// Субокно инспектора.
+        /// </summary>
+        public IInspectorTool Inspector { get; protected set; }
+
+        /// <summary>
+        /// Субокно списка ошибок.
+        /// </summary>
+        public IErrorList ErrorList { get; protected set; }
+
+        /// <summary>
+        /// Базовые типы субокон.
+        /// </summary>
         public override IEnumerable<Type> DefaultTools
         {
-            get { yield return typeof(IInspectorTool); }
+            get
+            {
+                yield return typeof(IInspectorTool);
+                yield return typeof(IOutput);
+                yield return typeof(IErrorList);
+            }
         }
 
+        /// <summary>
+        /// Инициализирует новый экземпляр класса <see cref="Main"/>.
+        /// </summary>
+        /// <param name="output">Субокно журнала.</param>
+        /// <param name="inspectorTool">Субокно инспектора.</param>
         [ImportingConstructor]
-        public Main(IOutput output, IInspectorTool inspectorTool)
+        public Main(IOutput output, IInspectorTool inspectorTool, IErrorList errorList)
         {
-            this.output = output;
-            this.inspectorTool = inspectorTool;
+            Output = output;
+            Inspector = inspectorTool;
+            ErrorList = errorList;
         }
 
+        /// <summary>
+        /// Происходит в момент инициализации.
+        /// </summary>
         public override void Initialize()
         {
             base.Initialize();
@@ -50,22 +77,25 @@ namespace Obsidian.Studio.Modules
             Shell.StatusBar.AddItem("Ln 44", new GridLength(100));
             Shell.StatusBar.AddItem("Col 79", new GridLength(100));
 
-            output.AppendLine("Started up");
+            Output.AppendLine("Started up");
 
-            Shell.ActiveDocumentChanged += (sender, e) => RefreshInspector();
-            RefreshInspector();
+            Shell.ActiveDocumentChanged += (sender, e) => OnInspectorUpdated();
+            OnInspectorUpdated();
 
             Task.WaitAll(procedures.ToArray());
         }
 
-        private void RefreshInspector()
+        /// <summary>
+        /// Происходит в момент обновления данных в инспекторе.
+        /// </summary>
+        protected virtual void OnInspectorUpdated()
         {
             if (Shell.ActiveItem != null)
-                inspectorTool.SelectedObject = new InspectableObjectBuilder()
+                Inspector.SelectedObject = new InspectableObjectBuilder()
                     .WithObjectProperties(Shell.ActiveItem, pd => pd.ComponentType == Shell.ActiveItem.GetType())
                     .ToInspectableObject();
             else
-                inspectorTool.SelectedObject = null;
+                Inspector.SelectedObject = null;
         }
     }
 }

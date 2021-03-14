@@ -193,9 +193,33 @@
                     </fluent:Backstage.Header>
 
                     <fluent:BackstageTabControl>
-                        <fluent:BackstageTabItem Header="New" />
-                        <fluent:BackstageTabItem Header="Print" />
-                        <fluent:Button Header="Blue" />
+                        <!-- Новый проект -->
+                        <fluent:BackstageTabItem>
+                            <fluent:BackstageTabItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <iconPacks:PackIconZondicons Kind="WindowNew" Margin="0,0,10,0" />
+                                    <TextBlock Text="{DynamicResource StrNewProject}" />
+                                </StackPanel>
+                            </fluent:BackstageTabItem.Header>
+
+                            <Grid Margin="50">
+                                <TextBlock Text="{DynamicResource StrNewProject}" />
+                            </Grid>
+                        </fluent:BackstageTabItem>
+                        <!-- Открыть существующий проект -->
+                        <fluent:BackstageTabItem>
+                            <fluent:BackstageTabItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <iconPacks:PackIconBoxIcons Kind="RegularWindowOpen" Margin="0,0,10,0" />
+                                    <TextBlock Text="{DynamicResource StrOpenExistingProject}" />
+                                </StackPanel>
+                            </fluent:BackstageTabItem.Header>
+
+                            <Grid>
+                                <TextBlock Text="{DynamicResource StrOpenExistingProject}" />
+                            </Grid>
+                        </fluent:BackstageTabItem>
+                        
                     </fluent:BackstageTabControl>
                 </fluent:Backstage>
             </fluent:Ribbon.Menu>

@@ -1,10 +1,13 @@
 ﻿namespace Obsidian.Studio.Views
 {
     /// <summary>
-    /// Логика взаимодействия для StartWindowView.xaml
+    /// Представляет загрузочный экран.
     /// </summary>
     public partial class StartWindowView
     {
+        /// <summary>
+        /// Инициализирует новый экземпляр класса <see cref="StartWindowView"/>.
+        /// </summary>
         public StartWindowView() => InitializeComponent();
     }
 }

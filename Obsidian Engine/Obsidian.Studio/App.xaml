@@ -1,8 +1,7 @@
 ﻿<Application x:Class="Obsidian.Studio.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Obsidian.Studio"
-             xmlns:gemini="http://schemas.timjones.io/gemini">
+             xmlns:local="clr-namespace:Obsidian.Studio">
     <Application.Resources>
         <ResourceDictionary>
 

@@ -5,9 +5,15 @@ using System.ComponentModel.Composition;
 
 namespace Obsidian.Studio.Themes
 {
+    /// <summary>
+    /// Представляет тёмную тему оформления.
+    /// </summary>
     [Export(typeof(ITheme))]
     public class DarkTheme : Gemini.Framework.Themes.DarkTheme
     {
+        /// <summary>
+        /// Возвращает связанные словари ресурсов.
+        /// </summary>
         public override IEnumerable<Uri> ApplicationResources
         {
             get

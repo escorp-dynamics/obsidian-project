@@ -4,6 +4,9 @@
 
     <s:String x:Key="StrAppTitle">Obsidian Studio 2022</s:String>
 
+    <s:String x:Key="StrNewProject">Новый проект</s:String>
+    <s:String x:Key="StrOpenExistingProject">Открыть существующий проект</s:String>
+
     <s:String x:Key="StrGlobalSettingsTooltip">Глобальные настройки</s:String>
 
 </ResourceDictionary>
